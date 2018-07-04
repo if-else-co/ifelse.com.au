@@ -1,0 +1,95 @@
+.nav {
+  padding: 1rem;
+}
+@media (min-width: 624px) {
+  .nav {
+    padding: 1rem 2rem;
+  }
+}
+
+.nav__wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.nav__logo {
+  position: relative;
+  float: left;
+  width: 36px;
+  height: 36px;
+}
+
+.nav__logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav__menu {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: right;
+}
+
+.nav__item {
+  float: left;
+  margin-left: 1rem;
+  height: 36px;
+}
+
+.nav__link {
+  appearance: none;
+  border: 0;
+  color: #3c3c3c;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 36px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav__button {
+  appearance: none;
+  padding: 0 .5rem;
+  font-size: 1rem;
+  color: #fff;
+  background: #3c3c3c;
+  border: 3px solid #3c3c3c;
+  transition: color .3s ease, background .3s ease, box-shadow .3s ease;
+}
+
+.nav__button:hover,
+.nav__button:focus {
+  color: #3c3c3c;
+  background: #fff;
+  cursor: pointer;
+}
+
+.nav__button-icon {
+  display: block;
+  padding: .1875rem;
+  width: 24px;
+  height: 24px;
+  transition: filter .3s ease;
+  
+  
+}
+@media (min-width: 480px) {
+  .nav__button-icon {
+    display: none;
+  }
+}
+
+.nav__button:hover .nav__button-icon {
+  filter: brightness(.25);
+}
+
+.nav__button-label {
+  display: none;
+}
+@media (min-width: 480px) {
+  .nav__button-label {
+    display: block;
+  }
+}

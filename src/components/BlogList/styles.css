@@ -1,0 +1,39 @@
+.blog-list {
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 2rem .5rem;
+}
+@media (min-width: 420px) {
+  .blog-list {
+    padding: 2rem 1rem;
+  }
+}
+@media (min-width: 624px) {
+  .blog-list {
+    padding: 2rem;
+  }
+}
+@media (min-width: 1080px) {
+  .blog-list {
+    max-width: 1080px;
+  }
+}
+
+.blog-list__title {
+  color: #313131;
+  margin: 0 0 3rem;
+  text-align: center;
+}
+
+.blog-list__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (min-width: 720px) {
+  .blog-list__list {
+    display: flex;
+  }
+}

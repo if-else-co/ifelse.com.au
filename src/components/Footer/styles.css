@@ -1,0 +1,15 @@
+.footer {
+  background: #3c3c3c;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-size: .75rem;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .footer {
+    font-size: .9rem;
+    text-align: left;
+  }
+}
