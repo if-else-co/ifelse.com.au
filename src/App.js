@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 /* Pages */
 import Home from './pages/Home';
-import Post from './pages/Post';
+import Post from './pages/Blog';
 
 /* Components */
 import Header from './components/Header';
