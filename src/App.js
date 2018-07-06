@@ -1,6 +1,7 @@
 /* React */
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { createBrowserHistory } from 'history'
+import { ConnectedRouter, connectRouter, routerMiddleware } from 'connected-react-router'
 
 import PageManager from './PageManager';
 
@@ -8,19 +9,25 @@ import PageManager from './PageManager';
 import './App.css';
 
 /* State */
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './state/reducers';
 import middleware from './state/middleware';
-const store = createStore(reducers, applyMiddleware.apply(null, middleware));
+const history = createBrowserHistory();
+middleware.push(routerMiddleware(history));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  connectRouter(history)(reducers),
+  composeEnhancers(applyMiddleware.apply(null, middleware)),
+);
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <BrowserRouter>
+        <ConnectedRouter history={history}>
           <PageManager />
-        </BrowserRouter>
+        </ConnectedRouter>
       </Provider>
     );
   }

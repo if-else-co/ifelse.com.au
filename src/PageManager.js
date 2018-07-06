@@ -40,7 +40,8 @@ class PageManager extends Component {
 }
 
 const mapStateToProps = state => ({
-  isMenuOpen: state.menu.open
+  router: state.router,
+  isMenuOpen: state.menu.open,
 });
 
 export default connect(mapStateToProps)(PageManager);

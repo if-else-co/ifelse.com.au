@@ -29,9 +29,9 @@ const BlogDetail = props => {
 
   return (
     <div className="blog-detail">
-      <img class="blog-detail__featured-image" src={imgSrc} alt="" />
-      <h1 class="blog-detail__title">{title}</h1>
-      <div class="blog-detail__content">
+      <img className="blog-detail__featured-image" src={imgSrc} alt="" />
+      <h1 className="blog-detail__title">{title}</h1>
+      <div className="blog-detail__content">
         {content}
       </div>
     </div>
