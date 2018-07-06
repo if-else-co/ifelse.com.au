@@ -18,7 +18,7 @@ class PageManager extends Component {
     return (
       <div className="App">
         {contactForm}
-        <form id="contact" style="display: none;" data-netlify="true">
+        <form id="contact" style={{display: 'none'}} data-netlify="true">
           <input type="text" name="name" />
           <input type="email" name="email" />
           <select name="budget" id="budget"></select>
