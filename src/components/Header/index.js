@@ -32,7 +32,9 @@ class Header extends Component {
       {
         icon: '',
         onClick: () => {
-          this.props.toggleMenu();
+          if (!this.props.isMenuOpen) {
+            this.props.toggleMenu();
+          }
         },
         label: 'get in touch',
         button: true,
