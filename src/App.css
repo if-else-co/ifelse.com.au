@@ -25,3 +25,45 @@ h2 {
 h3 {
   font-size: 1.5rem;
 }
+
+.form-field {
+  margin: 1rem;
+}
+
+.form-field__label {
+  display: block;
+  color: #666;
+  font-size: .85rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: .5rem;
+}
+
+.form-field__input {
+  padding: .25rem .5rem;
+  border: 0;
+  border-bottom: 1px solid #313131;
+  border-radius: 3px;
+  background: #eee;
+  appearance: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-field__submit {
+  border: 0;
+  background: 0;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-manager {
+  transition: filter .3s ease;
+}
+
+.blur-background {
+  filter: blur(1px) grayscale(1);
+}

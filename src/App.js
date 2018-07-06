@@ -1,14 +1,8 @@
 /* React */
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
-/* Pages */
-import Home from './pages/Home';
-import Post from './pages/Blog';
-
-/* Components */
-import Header from './components/Header';
-import Footer from './components/Footer';
+import PageManager from './PageManager';
 
 /* Styles */
 import './App.css';
@@ -25,16 +19,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <div className="App">
-            <Header />
-            <main>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/post/:id" component={Post} />
-              </Switch>
-            </main>
-            <Footer />
-          </div>
+          <PageManager />
         </BrowserRouter>
       </Provider>
     );

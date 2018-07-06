@@ -1,6 +1,6 @@
 import { createClient } from 'contentful';
 import {
-  BLOGS_FETCH, fetchBlogsSuccessful,
+  PROJECTS_FETCH, fetchProjectsSuccessful,
 } from './actions';
 
 const client = createClient({
@@ -8,14 +8,14 @@ const client = createClient({
   accessToken: process.env.REACT_APP_ACCESS_TOKEN
 });
 
-const getBlogs = cb => (
-  client.getEntries({ content_type: 'blog' }).then((response) => {cb(response.items)})
+const getProjects = cb => (
+  client.getEntries({ content_type: 'project' }).then((response) => {cb(response.items)})
 );
 
 export default (store) => next => action => {
   switch (action.type) {
-    case BLOGS_FETCH:
-      getBlogs(blogs => store.dispatch(fetchBlogsSuccessful(blogs)));
+    case PROJECTS_FETCH:
+      getProjects(projects => store.dispatch(fetchProjectsSuccessful(projects)));
       break;
     default:
   }

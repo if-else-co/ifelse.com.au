@@ -2,29 +2,31 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import ContactForm from '../ContactForm';
-
 import logo from './logo.png';
 import './styles.css';
 
 import { toggleMenu } from '../../state/Menu/actions';
 
+import { smoothScrollTo } from '../../helpers';
+
 class Header extends Component {
   render() {
+    
+
     let navItems = [
       {
         icon: '',
-        onClick: () => {},
+        onClick: () => {smoothScrollTo('blogs', 16, 500)},
         label: 'blogs',
       },
       {
         icon: '',
-        onClick: () => {},
+        onClick: () => {smoothScrollTo('solutions', 16, 500)},
         label: 'solutions',
       },
       {
         icon: '',
-        onClick: () => {},
+        onClick: () => {smoothScrollTo('case-studies', 16, 500)},
         label: 'case studies',
       },
       {
@@ -47,8 +49,6 @@ class Header extends Component {
         </li>
       );
     });
-
-    let contactForm = this.props.isMenuOpen ? <ContactForm /> : null;
     
     return (
       <header className="nav__wrapper">
@@ -61,7 +61,6 @@ class Header extends Component {
             <div className="clearfix"></div>
           </div>
         </nav>
-        {contactForm}
       </header>
     );
   }

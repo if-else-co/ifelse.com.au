@@ -4,12 +4,9 @@ import './styles.css';
 
 const Footer = () => {
   return (
-    <footer role="contentinfo" class="footer">
-      <div class="footer__copyright">
+    <footer role="contentinfo" className="footer">
+      <div className="footer__copyright">
           &copy; David Disch 2017
-      </div>
-      <div class="footer__links">
-        <a href=""></a>
       </div>
     </footer>
   )
