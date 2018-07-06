@@ -57,7 +57,7 @@ class ContactForm extends Component {
       <div className="contact-form">
         <button className="contact-form__close" onClick={this.props.toggleMenu}>-</button>
         <div className="contact-form__title">Get in touch</div>
-        <form data-netlify="true" className="contact-form__form" onSubmit={this.handleSubmit.bind(this)}>
+        <form className="contact-form__form" onSubmit={this.handleSubmit.bind(this)}>
           <div className="form-field form-field--text contact-form__field">
             <label className="form-field__label" htmlFor="name">Name</label>
             <input 
