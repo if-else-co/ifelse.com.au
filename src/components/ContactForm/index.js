@@ -34,7 +34,7 @@ class ContactForm extends Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state })
     })
-      .then(() => alert('Success!'))
+      .then(() => this.props.toggleMenu())
       .catch(error => alert(error));
   }
 

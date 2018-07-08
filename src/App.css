@@ -61,9 +61,25 @@ h3 {
 }
 
 .page-manager {
-  transition: filter .3s ease;
+  position: relative;
+  transition: filter .5s ease;
+}
+.page-manager::after {
+  content: ' ';
+  transition: background .5s ease;
 }
 
-.blur-background {
+.blur-background.page-manager {
   filter: blur(1px) grayscale(1);
+}
+.blur-background.page-manager::after {
+  content: ' ';
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75);
 }

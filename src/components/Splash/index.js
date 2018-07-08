@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import config from '../../config';
 import background from './background.png';
 import './styles.css';
+
+import { smoothScrollTo } from '../../helpers';
+
+import { toggleMenu } from '../../state/Menu/actions';
 
 class Splash extends Component {
   render() {
@@ -14,12 +18,16 @@ class Splash extends Component {
           <h1 className="splash__title">{config.title}</h1>
           <h2 className="splash__subtitle">{config.subtitle}</h2>
           <h3 className="splash__blurb">{config.blurb}</h3>
-          <Link className="splash__button" to={config.learn_more.link}>{config.learn_more.label}</Link>
-          <Link className="splash__button" to={config.inquire.link}>{config.inquire.label}</Link>
+          <a className="splash__button" onClick={() => smoothScrollTo('learn-more', 16, 500)}>{config.learn_more.label}</a>
+          <a className="splash__button" onClick={this.props.toggleMenu}>{config.inquire.label}</a>
         </div>
       </div>
     );
   }
 }
 
-export default Splash;
+const mapDispatchToProps = dispatch => ({
+  toggleMenu: () => dispatch(toggleMenu()),
+});
+
+export default connect(null, mapDispatchToProps)(Splash);

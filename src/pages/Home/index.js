@@ -5,9 +5,15 @@ import Helmet from 'react-helmet';
 import Splash from '../../components/Splash';
 import ProjectList from '../../components/ProjectList';
 import BlogList from '../../components/BlogList';
+import CallToAction from '../../components/CallToAction';
 
 import { fetchBlogs } from '../../state/Blogs/actions';
 import { fetchProjects } from '../../state/Projects/actions';
+import { toggleMenu } from '../../state/Menu/actions';
+
+import drupal8 from './drupal-8.png';
+import netlify from './netlify.png';
+import wordpress from './wordpress.png';
 
 import './styles.css';
 
@@ -39,12 +45,32 @@ class Home extends Component {
             applications.<br/><br/>We work with you to manage and update your 
             Facebook, Instagram, Twitter, Google Analytics, Adsense &amp; 
             Search Console as well as maintaining and hosting your own custom 
-            website. Get online today, <a href='#contact'>send us a message</a> and
+            website. Get online today, <a onClick={this.props.toggleMenu}>send us a message</a> and
             let's get started!
           </p>
         </div>
         <ProjectList projects={this.props.projects || []} />
+        <div className="solutions">
+          <ul className="solutions__list">
+            <li className="solutions__list-item">
+              <img className="solutions__image" src={wordpress} alt=""/>
+            </li>
+            <li className="solutions__list-item">
+              <img className="solutions__image" src={drupal8} alt=""/>
+            </li>
+            <li className="solutions__list-item">
+              <img className="solutions__image" src={netlify} alt=""/>
+            </li>
+          </ul>
+        </div>
         <BlogList blogs={this.props.blogs || []} />
+        <CallToAction
+          foreground="#fff"
+          background="#3e8889"
+          prompt="Ready to get started?"
+          buttonText="Tell us about your project."
+          onClick={this.props.toggleMenu}
+          />
       </div>
     );
   }
@@ -58,6 +84,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   fetchBlogs: () => dispatch(fetchBlogs()),
   fetchProjects: () => dispatch(fetchProjects()),
+  toggleMenu: () => dispatch(toggleMenu()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
