@@ -73,7 +73,9 @@ class Home extends Component {
             </li>
           </ul>
         </div>
-        <BlogList blogs={this.props.blogs || []} limit={3} />
+        <div id="blogs">
+          <BlogList blogs={this.props.blogs || []} limit={3} />
+        </div>
         <CallToAction
           foreground="#fff"
           background="#3e8889"

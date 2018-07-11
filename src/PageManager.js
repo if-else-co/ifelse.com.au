@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Post from './pages/Blog';
 
 /* Components */
+import Notifications from './components/Notifications';
 import Header from './components/Header';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
@@ -25,6 +26,7 @@ class PageManager extends Component {
           <select name="country" id="country"></select>
         </form>
         <div className={`page-manager${this.props.isMenuOpen ? ' blur-background' : ''}`}>
+          <Notifications />
           <Header />
           <main>
             <Switch>

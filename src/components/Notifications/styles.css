@@ -1,0 +1,40 @@
+.notifications {
+  position: fixed;
+  top: 25px;
+  z-index: 1;
+  text-align: center;
+  width: 50%;
+  left: 25%;
+}
+
+.notifications__item {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 4px;
+  font-weight: 700;
+  opacity: .95;
+  max-width: 100%;
+}
+
+.notifications__item--success {
+  background: #3e8889;
+  color: #fff;
+}
+
+.notifications__item-enter {
+  opacity: 0.01;
+}
+
+.notifications__item-enter.notifications__item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.notifications__item-leave {
+  opacity: 1;
+}
+
+.notifications__item-leave.notifications__item-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
