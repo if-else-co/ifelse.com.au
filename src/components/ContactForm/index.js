@@ -111,7 +111,7 @@ class ContactForm extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  toggleMenu: () => dispatch(toggleMenu())
+  toggleMenu: notification => dispatch(toggleMenu(notification))
 });
 
 export default connect(null, mapDispatchToProps)(ContactForm);
