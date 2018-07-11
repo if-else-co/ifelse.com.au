@@ -5,8 +5,9 @@ import BlogTeaser from '../BlogTeaser';
 import './styles.css';
 
 const BlogList = props => {
+  const limit = props.limit || 6;
   let imgSrc = null;
-  let blogs = props.blogs.map(blog => {
+  let blogs = props.blogs.filter((_, i) => i < limit).map(blog => {
     if (blog.fields.featured_image) {
       imgSrc = blog.fields.featured_image.fields.file.url;
     }
@@ -23,7 +24,6 @@ const BlogList = props => {
   });
   return (
     <div className="blog-list">
-      <h2 className="blog-list__title" id="blogs">Blogs</h2>
       <ul className="blog-list__list">
         {blogs}
       </ul>

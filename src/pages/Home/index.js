@@ -14,6 +14,7 @@ import { toggleMenu } from '../../state/Menu/actions';
 import drupal8 from './drupal-8.png';
 import netlify from './netlify.png';
 import wordpress from './wordpress.png';
+import nodejs from './nodejs.png';
 
 import './styles.css';
 
@@ -61,9 +62,18 @@ class Home extends Component {
             <li className="solutions__list-item">
               <img className="solutions__image" src={netlify} alt=""/>
             </li>
+            <li className="solutions__list-item">
+              <img className="solutions__image" src={nodejs} alt=""/>
+            </li>
+            <li className="solutions__list-item">
+              <img className="solutions__image" src={nodejs} alt=""/>
+            </li>
+            <li className="solutions__list-item">
+              <img className="solutions__image" src={nodejs} alt=""/>
+            </li>
           </ul>
         </div>
-        <BlogList blogs={this.props.blogs || []} />
+        <BlogList blogs={this.props.blogs || []} limit={3} />
         <CallToAction
           foreground="#fff"
           background="#3e8889"

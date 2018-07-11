@@ -51,11 +51,6 @@
   margin: 3rem auto;
   flex-wrap: wrap;
 }
-@media (min-width: 640px) {
-  .solutions__list {
-    flex-wrap: nowrap;
-  }
-}
 
 .solutions__list-body {
   color: #313131;
@@ -65,13 +60,13 @@
 .solutions__list-item {
   display: inline-block;
   text-align: center;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   flex: 1 1 100%;
 }
-@media (min-width: 640px) {
+@media (min-width: 800px) {
   .solutions__list-item {
-    margin: 0;
-    flex: 0 1 25%;
+    margin: 2rem 0;
+    flex: 0 1 33%;
   }
 }
 

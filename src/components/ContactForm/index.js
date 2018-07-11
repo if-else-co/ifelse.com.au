@@ -5,6 +5,7 @@ import CountrySelect from '../CountrySelect';
 import OutsideClickWatcher from '../OutsideClickWatcher';
 
 import { toggleMenu } from '../../state/Menu/actions';
+import { NOTIFICATION_STATUS } from '../../state/Notifications/actions';
 
 import { encode } from '../../helpers';
 
@@ -34,7 +35,10 @@ class ContactForm extends Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state })
     })
-      .then(() => this.props.toggleMenu())
+      .then(() => this.props.toggleMenu({
+        message: 'Thank you for reaching out! We will get back to you as soon as possible.',
+        status: NOTIFICATION_STATUS.SUCCESS
+      }))
       .catch(error => alert(error));
   }
 

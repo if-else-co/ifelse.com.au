@@ -61,15 +61,12 @@
 }
 
 .contact-form .form-field__submit {
-  color: #313131;
-  border-bottom: 3px solid #fff;
+  color: #fff;
+  background: #3e8889;
+  padding: .5rem;
+  border-radius: 4px;
   cursor: pointer;
   font-size: .9rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-}
-
-.contact-form .form-field__submit:hover,
-.contact-form .form-field__submit:focus {
-  border-bottom: 3px solid #3e8889;
 }
