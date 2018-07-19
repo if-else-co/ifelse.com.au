@@ -15,6 +15,8 @@ import drupal8 from './drupal-8.png';
 import netlify from './netlify.png';
 import wordpress from './wordpress.png';
 import nodejs from './nodejs.png';
+import contentful from './contentful.png';
+import react from './react.png';
 
 import './styles.css';
 
@@ -51,25 +53,37 @@ class Home extends Component {
           </p>
         </div>
         <ProjectList projects={this.props.projects || []} />
-        <div className="solutions">
+        <div className="solutions" id="solutions">
           <ul className="solutions__list">
             <li className="solutions__list-item">
-              <img className="solutions__image" src={wordpress} alt=""/>
+              <a href="https://wordpress.org/">
+                <img className="solutions__image" src={wordpress} alt=""/>
+              </a>
             </li>
             <li className="solutions__list-item">
-              <img className="solutions__image" src={drupal8} alt=""/>
+              <a href="https://www.drupal.org/">
+                <img className="solutions__image" src={drupal8} alt=""/>
+              </a>
             </li>
             <li className="solutions__list-item">
-              <img className="solutions__image" src={netlify} alt=""/>
+              <a href="https://www.netlify.com/">
+                <img className="solutions__image" src={netlify} alt=""/>
+              </a>
             </li>
             <li className="solutions__list-item">
-              <img className="solutions__image" src={nodejs} alt=""/>
+              <a href="https://nodejs.org/en/">
+                <img className="solutions__image" src={nodejs} alt=""/>
+              </a>
             </li>
             <li className="solutions__list-item">
-              <img className="solutions__image" src={nodejs} alt=""/>
+              <a href="https://www.contentful.com/">
+                <img className="solutions__image" src={contentful} alt=""/>
+              </a>
             </li>
             <li className="solutions__list-item">
-              <img className="solutions__image" src={nodejs} alt=""/>
+              <a href="https://reactjs.org/">
+                <img className="solutions__image" src={react} alt=""/>
+              </a>
             </li>
           </ul>
         </div>

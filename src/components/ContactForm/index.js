@@ -57,9 +57,9 @@ class ContactForm extends Component {
       'more than $10,000',
     ].map(budgetOption => <option key={budgetOption} value={budgetOption}>{budgetOption}</option>);
 
-    return <OutsideClickWatcher onOutsideClick={this.props.toggleMenu}>
+    return <OutsideClickWatcher onOutsideClick={() => this.props.toggleMenu()}>
       <div className="contact-form">
-        <button className="contact-form__close" onClick={this.props.toggleMenu}>-</button>
+        <button className="contact-form__close" onClick={() => this.props.toggleMenu()}>-</button>
         <div className="contact-form__title">Get in touch</div>
         <form className="contact-form__form" onSubmit={this.handleSubmit.bind(this)}>
           <div className="form-field form-field--text contact-form__field">

@@ -38,11 +38,6 @@
   border-bottom: 1px solid #ccc;
 }
 
-.solutions__title {
-  text-align: center;
-  color: #313131;
-}
-
 .solutions__list {
   display: flex;
   justify-content: space-between;

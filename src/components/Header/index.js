@@ -11,8 +11,6 @@ import { smoothScrollTo } from '../../helpers';
 
 class Header extends Component {
   render() {
-    
-
     let navItems = [
       {
         icon: '',
@@ -39,7 +37,11 @@ class Header extends Component {
         label: 'get in touch',
         button: true,
       },
-    ].map(item => {
+    ]
+    .filter((_, i) => {
+      return !(this.props.pathname !== '/' && i < 3);
+    })
+    .map(item => {
       let contents = item.icon !== ''
         ? <img className="nav__button-icon" src={item.icon} alt="" />
         : <span className="nav__button-label">{item.label}</span>;
@@ -59,7 +61,9 @@ class Header extends Component {
             <Link className="nav__logo" to="/">
               <img src={logo} className="nav__logo-img" alt="logo" />
             </Link>
-            <ul className="nav__menu">{navItems}</ul>
+            <ul className="nav__menu">
+              {navItems}
+            </ul>
             <div className="clearfix"></div>
           </div>
         </nav>
@@ -73,7 +77,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  isMenuOpen: state.menu.open
+  isMenuOpen: state.menu.open,
+  pathname: state.router.location.pathname,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
