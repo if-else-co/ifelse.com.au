@@ -5,25 +5,40 @@ import ProjectTeaser from '../ProjectTeaser';
 import './styles.css';
 
 const ProjectList = props => {
-  let projects = props.projects.map(project => {
+  let loadedProjects = props.loading === false
+    ? props.projects
+    : [{}, {}, {}, {}, {}, {}];
+
+  let projects = loadedProjects.map((project, i) => {
     let imgSrc;
     let mobileSrc;
     let category;
-    if (project.fields.featured_image) {
-      imgSrc = project.fields.featured_image.fields.file.url;
-      mobileSrc = project.fields.mobile_image.fields.file.url;
-      category = project.fields.tags[0].fields.title;
+    let id = i;
+    let title;
+    let link;
+
+    if (props.loading === false) {
+      if (project.fields.featured_image) {
+        imgSrc = project.fields.featured_image.fields.file.url;
+        mobileSrc = project.fields.mobile_image.fields.file.url;
+        category = project.fields.tags[0].fields.title;
+      }
+
+      id = project.sys.id;
+      title = project.fields.title;
+      link = project.fields.link;
     }
 
     return (
       <ProjectTeaser 
-        key={project.sys.id}
-        to={project.sys.id}
+        key={id}
+        to={id}
         featuredImage={imgSrc}
         mobileImage={mobileSrc}
-        title={project.fields.title}
-        url={project.fields.link}
+        title={title}
+        url={link}
         type={category}
+        loading={props.loading}
       />
     );
   });

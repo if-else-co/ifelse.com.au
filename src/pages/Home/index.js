@@ -52,7 +52,9 @@ class Home extends Component {
             let's get started!
           </p>
         </div>
-        <ProjectList projects={this.props.projects || []} />
+        <ProjectList
+          projects={this.props.projects || []}
+          loading={this.props.loadingProjects} />
         <div className="solutions" id="solutions">
           <ul className="solutions__list">
             <li className="solutions__list-item">
@@ -88,7 +90,11 @@ class Home extends Component {
           </ul>
         </div>
         <div id="blogs">
-          <BlogList blogs={this.props.blogs || []} limit={3} />
+          <BlogList
+            blogs={this.props.blogs || []}
+            limit={3}
+            loading={this.props.loadingBlogs}
+            />
         </div>
         <CallToAction
           foreground="#fff"
@@ -104,7 +110,9 @@ class Home extends Component {
 
 const mapStateToProps = (state) => ({
   blogs: state.blogs.blogs,
+  loadingBlogs: state.blogs.fetching,
   projects: state.projects.projects,
+  loadingProjects: state.projects.fetching,
 });
 
 const mapDispatchToProps = (dispatch) => ({

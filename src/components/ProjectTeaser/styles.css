@@ -15,6 +15,16 @@
   }
 }
 
+.project-teaser--loading .project-teaser__name {
+  height: 1.5rem;
+  width: 50%;
+}
+
+.project-teaser--loading .project-teaser__type {
+  height: .9rem;
+  width: 50%;
+}
+
 .project-teaser__link {
   text-decoration: none;
 }
@@ -70,4 +80,23 @@
 .project-teaser__type {
   margin: .5rem 0 0;
   font-size: .9rem;
+}
+
+.loading-background {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+}
+
+@keyframes placeHolderShimmer{
+  0%{
+    background-position: -468px 0
+  }
+  100%{
+    background-position: 468px 0
+  }
 }

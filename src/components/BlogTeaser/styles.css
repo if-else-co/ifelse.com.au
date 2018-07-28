@@ -49,6 +49,13 @@
   border-right: 1px solid #3E8989;
   border-bottom: 1px solid #3E8989;
 }
+.blog-teaser:hover.blog-teaser--loading .blog-teaser__wrapper {
+  background: inherit;
+  color: inherit;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
 
 .blog-teaser__link {
   color: inherit;
@@ -78,9 +85,21 @@
     font-size: 1.25rem;
   }
 }
+.blog-teaser--loading .blog-teaser__title {
+  height: 1.1rem;
+  margin-bottom: .5rem;
+}
+@media (min-width: 720px) {
+  .blog-teaser--loading .blog-teaser__title {
+    height: 1.25rem;
+  }
+}
 
 .blog-teaser__published {
   font-size: .75rem;
   margin-top: 1rem;
   font-family: 'Montserrat', sans-serif;
+}
+.blog-teaser--loading .blog-teaser__published {
+  height: .75rem;
 }

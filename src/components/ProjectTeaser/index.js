@@ -5,8 +5,16 @@ import phone from './phone.png';
 import './styles.css';
 
 const ProjectTeaser = props => {
-  return (
-    <li className="project-teaser">
+  let loading = <li className="project-teaser project-teaser--loading">
+    <div className="loading-background project-teaser__image-wrapper"></div>
+    <div className="project-teaser__content">
+      <div className="loading-background project-teaser__name"></div> 
+      <div className="loading-background project-teaser__type"></div>
+    </div>
+  </li>;
+  let element;
+  if (props.loading === false) {
+    element = <li className="project-teaser">
       <a className="project-teaser__link" href={props.url}>
         <div className="project-teaser__image-wrapper">
           <img className="project-teaser__desktop-wrapper" src={desktop} alt=""/>
@@ -19,8 +27,10 @@ const ProjectTeaser = props => {
           <div className="project-teaser__type">{props.type}</div>
         </div>
       </a>
-    </li>
-  );
+    </li>;
+  }
+
+  return props.loading ? loading : element;
 }
   
 
