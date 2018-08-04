@@ -162,9 +162,15 @@
 .pricing__help-link {
   position: absolute;
   right: .5rem;
-  top: -1rem;
+  top: 1rem;
   width: 18px;
   height: 18px;
+}
+
+@media (min-width: 1000px) {
+  .pricing__help-link {
+    top: -1rem;
+  }  
 }
 
 .pricing__help {
