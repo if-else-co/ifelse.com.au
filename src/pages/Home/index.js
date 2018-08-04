@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 
 import Splash from '../../components/Splash';
 import ProjectList from '../../components/ProjectList';
+import Pricing from '../../components/Pricing';
 import BlogList from '../../components/BlogList';
 import CallToAction from '../../components/CallToAction';
 
@@ -89,6 +90,7 @@ class Home extends Component {
             </li>
           </ul>
         </div>
+        <Pricing onSelect={this.props.toggleMenu} />
         <div id="blogs">
           <BlogList
             blogs={this.props.blogs || []}
