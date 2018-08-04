@@ -1,30 +1,90 @@
 .pricing {
+  position: relative;
   margin: 2rem auto;
-  padding-bottom: 4rem;
   border-bottom: 1px solid #ccc;
   max-width: 960px;
+  overflow-x: scroll;
 }
 
 .pricing__grid {
-  display: flex;
+  text-align: center;
+  min-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 1000px) {
+  .pricing__grid {
+    text-align: left;
+    display: flex;
+    margin: 0;
+  }
 }
 
 .pricing__grid-item {
   position: relative;
-  flex: 4 4 25%;
-  justify-content: space-between;
+  display: inline-block;
+  width: 280px;
   margin-right: 1rem;
+  vertical-align: top;
+}
+
+.pricing__grid-item:first-child {
+  display: block;
+  width: auto;
+  margin: 2rem auto;
+}
+
+.pricing__grid-item:last-child {
+  margin-right: 0;
+}
+
+@media (min-width: 1000px) {
+  .pricing__grid-item {
+    flex: 4 4 25%;
+    justify-content: space-between;
+    margin: 0;
+    margin-right: 1rem;
+    vertical-align: baseline;
+  }
+
+  .pricing__grid-item:first-child {
+    margin: 0;
+    margin-right: 1rem;
+  }  
 }
 
 .pricing__overview {
-  position: relative;
-  height: 275px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (min-width: 1000px) {    
+  .pricing__overview {
+    position: relative;
+    height: 275px;
+  }
 }
 
 .pricing__title {
   color: #313131;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
+  text-align: left;
+  margin-left: 2.5rem;
+}
+
+@media (min-width: 960px) {
+  .pricing__title {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pricing__title {
+    font-size: 3rem;
+    text-align: left;
+  }
 }
 
 .pricing__info {
@@ -42,28 +102,35 @@
 }
 
 .pricing__plan.pricing--blue {
-  border-top: 10px solid #3e8989;
-  color: #3e8989;
-}
-
-.pricing__plan.pricing--yellow {
-  border-top: 10px solid #ffa000;
-  color: #ffa000;
-}
-
-.pricing__plan.pricing--purple {
   border-top: 10px solid transparent;
-  background: #7a306c;
+  background: #3e8989;
   color: #fff;
 }
 
+.pricing__plan.pricing--dblue {
+  border-top: 10px solid #05668d;
+  color: #05668d;
+}
+
+.pricing__plan.pricing--purple {
+  border-top: 10px solid #7a306c;
+  color: #7a306c;
+}
+
 .pricing__plan-sections {
-  position: absolute;
-  width: 100%;
-  height: 509px;
-  top: 275px;
-  padding: 2.15rem 0 0;
-  background: #efefef;
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .pricing__plan-sections {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    top: 275px;
+    padding: 2.15rem 0 0;
+    background: #efefef;
+  }
 }
 
 .pricing__plan-section-name {
@@ -132,25 +199,34 @@
   background: none;
   color: #fff;
   font-weight: 700;
-  position: absolute;
-  padding: .5rem 0;
-  bottom: 1rem;
-  left: 50%;
-  width: 175px;
-  transform: translateX(-50%);
+  padding: .75rem .5rem;
+  margin: 2rem 0 1rem;
   cursor: pointer;
 }
 
-.pricing--blue .pricing__button {
-  background: #3e8989;
+@media (min-width: 1000px) {
+  .pricing__button {
+    font-size: .9rem;
+    margin: 0;
+    padding: .5rem 0;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 175px;
+    transform: translateX(-50%);
+  }
 }
 
-.pricing--yellow .pricing__button {
-  background: #ffa000;
+.pricing--blue .pricing__button {
+  background: #57a8a8;
+}
+
+.pricing--dblue .pricing__button {
+  background: #05668d;
 }
 
 .pricing--purple .pricing__button {
-  background: #b261a2;
+  background: #7a306c;
 }
 
 .pricing__plan-contents-section {
@@ -158,28 +234,57 @@
   padding: 1rem;
 }
 
-.pricing--purple .pricing__plan-contents-section {
+.pricing__plan-contents-section-name {
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+@media (min-width: 1000px) {
+  .pricing__plan-contents-section-name {
+    display: none;
+  }
+}
+
+.pricing--blue .pricing__plan-contents-section {
   border-top: 2px solid transparent;
 }
 
 .pricing__plan-contents-item {
   margin: 1rem 0;
-  height: 24px;
+}
+
+@media (min-width: 1000px) {
+  .pricing__plan-contents-item {
+    height: 24px;
+  }
+
+  .pricing__plan-contents-item > span {
+    display: none;
+  }
 }
 
 .pricing__checkmark {
+  display: none;
   width: 24px;
   height: 24px;
 }
 
-.pricing--blue .pricing__checkmark {
-  fill: #3e8989;
+@media (min-width: 1000px) {
+  .pricing__checkmark {
+    display: inline;
+  }
 }
 
-.pricing--yellow .pricing__checkmark {
-  fill: #ffa000;
+.pricing--blue .pricing__checkmark {
+  fill: #fff;
+}
+
+.pricing--dblue .pricing__checkmark {
+  fill: #05668d;
 }
 
 .pricing--purple .pricing__checkmark {
-  fill: #fff;
+  fill: #7a306c;
 }
