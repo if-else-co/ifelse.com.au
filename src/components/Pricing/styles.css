@@ -159,6 +159,28 @@
   border-top: 2px solid #ccc;
 }
 
+.pricing__help-link {
+  position: absolute;
+  right: .5rem;
+  top: -1rem;
+  width: 18px;
+  height: 18px;
+}
+
+.pricing__help {
+  fill: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.pricing--dblue .pricing__help {
+  fill: #05668d;
+}
+
+.pricing--purple .pricing__help {
+  fill: #7a306c;
+}
+
 .pricing__plan-upfront {
   font-size: 2rem;
   font-weight: 700;
