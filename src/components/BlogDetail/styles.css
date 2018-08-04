@@ -20,11 +20,39 @@
   font-size: 1.25rem;
   padding: 0 1rem;
   color: #212121;
+  line-height: 3rem;
 }
 @media (min-width: 420px) {
   .blog-detail__title {
     font-size: 1.5rem;
     padding: 0 2rem;
+  }
+}
+
+.blog-detail__meta {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 100%;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #779191;
+}
+
+@media (min-width: 420px) {
+  .blog-detail__meta {
+    font-size: .9rem;
+    margin: 1rem auto;
+    padding: 0 2rem;
+    max-width: 560px;
+  }
+}
+
+@media (min-width: 960px) {
+  .blog-detail__meta {
+    font-size: 1rem;
+    margin: 2rem auto;
+    max-width: 760px;
   }
 }
 
