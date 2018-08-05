@@ -1,17 +1,35 @@
-.blog-detail__featured-image {
+.blog-detail {
+  margin: 0 auto 4rem;
+}
+
+.blog-detail__image-container {
   display: block;
   margin: 0 auto 2rem;
   max-width: 100%;
 }
 @media (min-width: 720px) {
-  .blog-detail__featured-image {
+  .blog-detail__image-container {
     margin: 2rem auto;
   }
 }
 @media (min-width: 960px) {
-  .blog-detail__featured-image {
+  .blog-detail__image-container {
     max-width: 840px;
   }
+}
+
+.blog-detail__featured-image-wrapper {
+  position: relative;
+  padding-bottom: 33.33%;
+  overflow: hidden;
+}
+
+.blog-detail__featured-image {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .blog-detail__title {
@@ -29,34 +47,6 @@
     padding: 0 2rem;
   }
 }
-
-.blog-detail__meta {
-  margin: 2rem auto;
-  padding: 0 1rem;
-  max-width: 100%;
-  font-size: .8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #779191;
-}
-
-@media (min-width: 420px) {
-  .blog-detail__meta {
-    font-size: .9rem;
-    margin: 1rem auto;
-    padding: 0 2rem;
-    max-width: 560px;
-  }
-}
-
-@media (min-width: 960px) {
-  .blog-detail__meta {
-    font-size: 1rem;
-    margin: 2rem auto;
-    max-width: 760px;
-  }
-}
-
 @media (min-width: 560px) {
   .blog-detail__title {
     font-size: 2rem;
@@ -68,6 +58,39 @@
   .blog-detail__title {
     max-width: 760px;
   }
+}
+.blog-detail--loading .blog-detail__title > div {
+  margin: 1rem 0;
+  height: 2rem;
+}
+
+.blog-detail__meta {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 100%;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #779191;
+}
+@media (min-width: 420px) {
+  .blog-detail__meta {
+    font-size: .9rem;
+    margin: 1rem auto;
+    padding: 0 2rem;
+    max-width: 560px;
+  }
+}
+@media (min-width: 960px) {
+  .blog-detail__meta {
+    font-size: 1rem;
+    margin: 2rem auto;
+    max-width: 760px;
+  }
+}
+.blog-detail--loading .blog-detail__meta > div {
+  width: 200px;
+  height: 2rem;
 }
 
 .blog-detail__content {
@@ -155,4 +178,9 @@
     max-width: 760px;
     padding-left: 3rem;
   }
+}
+
+.blog-detail--loading .blog-detail__content > p {
+  margin: 1rem auto;
+  height: 1.5rem;
 }

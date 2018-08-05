@@ -13,6 +13,10 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './state/reducers';
 import middleware from './state/middleware';
+import logger from './state/logger';
+if (process.env.NODE_ENV === 'development') {
+  middleware.push(logger);
+}
 const history = createBrowserHistory();
 middleware.push(routerMiddleware(history));
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

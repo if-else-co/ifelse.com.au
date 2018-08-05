@@ -22,7 +22,7 @@ const BlogTeaser = props => {
     renderedBlog = <li className="blog-teaser">
       <Link className="blog-teaser__link" to={`post/${props.to}`}>
         <div className="blog-teaser__image-wrapper">
-          <img className="blog-teaser__image" src={props.src} alt="" />
+          <img className="blog-teaser__image" src={props.src} alt={props.alt} />
         </div>
         <div className="blog-teaser__wrapper">
           <div className="blog-teaser__title">

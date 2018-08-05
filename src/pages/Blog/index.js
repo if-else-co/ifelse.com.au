@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import BlogDetail from '../../components/BlogDetail';
 
 import { fetchBlogs } from '../../state/Blogs/actions';
-import { getBlogById } from '../../state/Blogs/selector';
+import { getBlogBySlug } from '../../state/Blogs/selector';
 
 class Blog extends Component {
   componentWillMount() {
@@ -26,7 +26,7 @@ class Blog extends Component {
     return (
       <div>
         <Helmet title={title} />
-        <BlogDetail blog={this.props.blog} />
+        <BlogDetail blog={this.props.blog} loading={this.props.loading} />
       </div>
     );
   }
@@ -37,7 +37,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = (state, ownProps) => ({
-  blog: getBlogById(state.blogs, ownProps.match.params.id)
+  blog: getBlogBySlug(state.blogs, ownProps.match.params.slug),
+  loading: state.blogs.fetching,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Blog);

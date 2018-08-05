@@ -8,6 +8,8 @@ class Typewriter extends React.Component {
   }
 
   componentWillMount() {
+    let timeBetweenCharacters = this.props.timeBetweenCharacters || 50;
+    let timeToRead = this.props.timeToRead || 2000;
     this.interval = setInterval(() => {
       this.setState({
         letterCount: this.state.letterCount + 1,
@@ -25,10 +27,10 @@ class Typewriter extends React.Component {
               blurbIndex: this.state.blurbIndex + 1,
               resetting: false,
             });
-          }, 2000);
+          }, timeToRead);
         })
       }
-    }, 50);
+    }, timeBetweenCharacters);
   }
 
   componentWillUnmount() {

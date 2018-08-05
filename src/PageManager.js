@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 /* Pages */
 import Home from './pages/Home';
-import Post from './pages/Blog';
+import Blog from './pages/Blog';
 
 /* Components */
 import Notifications from './components/Notifications';
@@ -31,7 +31,7 @@ class PageManager extends Component {
           <main>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/post/:id" component={Post} />
+              <Route path="/post/:slug" component={Blog} />
             </Switch>
           </main>
           <Footer />
