@@ -38,7 +38,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Helmet title="auspicus.io" />
+        <Helmet title="auspicus.io - Web Development, Design &amp; Social Media Marketing" />
         <Splash />
         <div className="intro">
           <h2 className="intro__title" id="learn-more">What we do</h2>
