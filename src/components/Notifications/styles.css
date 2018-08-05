@@ -1,4 +1,6 @@
 .notifications {
+  font-size: .9rem;
+  font-family: 'Montserrat', sans-serif;
   position: fixed;
   top: 25px;
   z-index: 1;

@@ -1,7 +1,7 @@
 .nav {
   padding: 1rem;
 }
-@media (min-width: 624px) {
+@media (min-width: 640px) {
   .nav {
     padding: 1rem 2rem;
   }
@@ -10,6 +10,45 @@
 .nav__wrapper {
   max-width: 720px;
   margin: 0 auto;
+}
+
+.nav__contact {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  background: #3c3c3c;
+  padding: 1rem;
+}
+
+.nav__contact-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 .25rem;
+  box-sizing: border-box;
+}
+@media (min-width: 640px) {
+  .nav__contact-container {
+    padding: 0 1rem;
+  }
+}
+@media (min-width: 720px) {
+  .nav__contact-container {
+    padding: 0 2rem;
+  }
+}
+
+.nav__contact-method {
+  color: inherit;
+  text-decoration: inherit;
+  margin-right: 1rem;
+}
+
+.nav__contact-method-icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: bottom;
+  margin-right: .25rem;
 }
 
 .nav__logo {
@@ -72,11 +111,9 @@
   padding: .1875rem;
   width: 24px;
   height: 24px;
-  transition: filter .3s ease;
-  
-  
+  transition: filter .3s ease; 
 }
-@media (min-width: 480px) {
+@media (min-width: 640px) {
   .nav__button-icon {
     display: none;
   }
@@ -89,7 +126,7 @@
 .nav__button-label {
   display: none;
 }
-@media (min-width: 480px) {
+@media (min-width: 640px) {
   .nav__button-label {
     display: block;
   }

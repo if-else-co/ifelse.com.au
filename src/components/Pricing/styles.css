@@ -126,7 +126,7 @@
     display: block;
     position: absolute;
     width: 100%;
-    height: 550px;
+    height: 590px;
     top: 275px;
     padding: 2.15rem 0 0;
     background: #efefef;
@@ -218,7 +218,8 @@
 
 .pricing__plan-monthly > div {
   color: #779191;
-  font-size: 1rem;
+  font-size: .8rem;
+  font-weight: 400;
 }
 
 .pricing__button {

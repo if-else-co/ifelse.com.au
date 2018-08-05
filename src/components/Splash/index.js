@@ -7,6 +7,7 @@ import './styles.css';
 
 import { smoothScrollTo } from '../../helpers';
 
+import Typewriter from '../Typewriter';
 import { toggleMenu } from '../../state/Menu/actions';
 
 class Splash extends Component {
@@ -17,7 +18,9 @@ class Splash extends Component {
         <div className="splash__content">
           <h1 className="splash__title">{config.title}</h1>
           <h2 className="splash__subtitle">{config.subtitle}</h2>
-          <h3 className="splash__blurb">{config.blurb}</h3>
+          <h3 className="splash__blurb">
+            <Typewriter texts={config.blurb} />
+          </h3>
           <a className="splash__button" onClick={() => smoothScrollTo('learn-more', 16, 500)}>{config.learn_more.label}</a>
           <a className="splash__button" onClick={this.props.toggleMenu}>{config.inquire.label}</a>
         </div>

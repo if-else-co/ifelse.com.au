@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import Splash from '../../components/Splash';
 import ProjectList from '../../components/ProjectList';
 import Pricing from '../../components/Pricing';
+import Process from '../../components/Process';
 import BlogList from '../../components/BlogList';
 import CallToAction from '../../components/CallToAction';
 
@@ -91,6 +92,7 @@ class Home extends Component {
           </ul>
         </div>
         <Pricing onSelect={this.props.toggleMenu} />
+        <Process />
         <div id="blogs">
           <BlogList
             blogs={this.props.blogs || []}

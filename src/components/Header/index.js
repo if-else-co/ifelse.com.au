@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import logo from './logo.png';
+import chat from './chat.svg';
+import call from '../Footer/call.svg';
+import mail from './mail.svg';
 import './styles.css';
 
 import { toggleMenu } from '../../state/Menu/actions';
@@ -28,7 +31,7 @@ class Header extends Component {
         label: 'case studies',
       },
       {
-        icon: '',
+        icon: chat,
         onClick: () => {
           if (!this.props.isMenuOpen) {
             this.props.toggleMenu();
@@ -42,31 +45,52 @@ class Header extends Component {
       return !(this.props.pathname !== '/' && i < 3);
     })
     .map(item => {
-      let contents = item.icon !== ''
+      let icon = item.icon !== ''
         ? <img className="nav__button-icon" src={item.icon} alt="" />
-        : <span className="nav__button-label">{item.label}</span>;
+        : null;
+      let contents = <span className="nav__button-label">{item.label}</span>;
       return (
         <li key={item.label} className="nav__item">
           <button className={`nav__link ${item.button ? 'nav__button' : ''}`} onClick={item.onClick}>
-            {contents}
+            {icon}{contents}
           </button>
         </li>
       );
     });
     
     return (
-      <header className="nav__wrapper">
-        <nav className="nav">
-          <div className="nav__wrapper">
-            <Link className="nav__logo" to="/">
-              <img src={logo} className="nav__logo-img" alt="logo" />
-            </Link>
-            <ul className="nav__menu">
-              {navItems}
-            </ul>
-            <div className="clearfix"></div>
+      <header>
+        <div className="nav__contact">
+          <div className="nav__contact-container">
+            <a className="nav__contact-method" href="tel:+17608964478">
+              <img
+                className="nav__contact-method-icon"
+                src={call}
+                alt="Telephone ready to call" />
+              +1 (760) 896-4478
+            </a>
+            <a className="nav__contact-method" href="mailto:davidedisch@gmail.com">
+              <img
+                className="nav__contact-method-icon"
+                src={mail}
+                alt="Letter" />
+              davidedisch@gmail.com
+            </a>
           </div>
-        </nav>
+        </div>
+        <div className="nav__wrapper">
+          <nav className="nav">
+            <div className="nav__wrapper">
+              <Link className="nav__logo" to="/">
+                <img src={logo} className="nav__logo-img" alt="logo" />
+              </Link>
+              <ul className="nav__menu">
+                {navItems}
+              </ul>
+              <div className="clearfix"></div>
+            </div>
+          </nav>
+        </div>
       </header>
     );
   }

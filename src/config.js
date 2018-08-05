@@ -1,7 +1,13 @@
 export default {
   title: 'auspicus.io',
   subtitle: 'Professional online presence management',
-  blurb: 'To bring your brand from first frames to fruition',
+  blurb: [
+    'Bringing your brand from an idea to a creation',
+    'Optimizing your website for search engines',
+    'Building beatiful things',
+    'Writing automated tests',
+    'Working hard to connect you to your audience'
+  ],
   learn_more: {
     link: '#learn-more',
     label: 'learn more',

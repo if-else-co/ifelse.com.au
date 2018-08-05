@@ -13,7 +13,7 @@ const Checkmark = () => (
 );
 
 const Question = () => (
-  <svg class="pricing__help" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <svg className="pricing__help" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
     <path d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM10.59 8.59a1 1 0 1 1-1.42-1.42 4 4 0 1 1 5.66 5.66l-2.12 2.12a1 1 0 1 1-1.42-1.42l2.12-2.12A2 2 0 0 0 10.6 8.6zM12 18a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
   </svg>
 );
@@ -30,6 +30,7 @@ const Pricing = props => {
               <span className="pricing__plan-section-name">Website</span>
               <div className="pricing__plan-section-item">Domain management</div>
               <div className="pricing__plan-section-item">Hosting</div>
+              <div className="pricing__plan-section-item">SEO</div>
               <div className="pricing__plan-section-item">Custom design</div>
               <div className="pricing__plan-section-item">Custom application</div>
             </div>
@@ -60,7 +61,7 @@ const Pricing = props => {
               <div className="pricing__plan-plus">+</div>
               <div className="pricing__plan-monthly">
                 <sup>$</sup>
-                10
+                25
                 <div>/ month</div>
               </div>
               <button
@@ -74,6 +75,7 @@ const Pricing = props => {
                 <div className="pricing__plan-contents-section-name">Website</div>
                 <div className="pricing__plan-contents-item"><span>Domain management</span><Checkmark /></div>
                 <div className="pricing__plan-contents-item"><span>Hosting</span><Checkmark /></div>
+                <div className="pricing__plan-contents-item"><span>SEO</span><Checkmark /></div>
                 <div className="pricing__plan-contents-item"></div>
                 <div className="pricing__plan-contents-item"></div>
               </div>
@@ -105,7 +107,7 @@ const Pricing = props => {
               <div className="pricing__plan-plus">+</div>
               <div className="pricing__plan-monthly">
                 <sup>$</sup>
-                25
+                50
                 <div>/ month</div>
               </div>
               <button
@@ -119,6 +121,7 @@ const Pricing = props => {
                 <div className="pricing__plan-contents-section-name">Website</div>
                 <div className="pricing__plan-contents-item"><span>Domain management</span><Checkmark /></div>
                 <div className="pricing__plan-contents-item"><span>Hosting</span><Checkmark /></div>
+                <div className="pricing__plan-contents-item"><span>SEO</span><Checkmark /></div>
                 <div className="pricing__plan-contents-item"><span>Custom design</span><Checkmark /></div>
                 <div className="pricing__plan-contents-item"></div>
               </div>
@@ -155,6 +158,7 @@ const Pricing = props => {
                 <div className="pricing__plan-contents-section-name">Website</div>
                 <div className="pricing__plan-contents-item"><span>Domain management</span><Checkmark /></div>
                 <div className="pricing__plan-contents-item"><span>Hosting</span><Checkmark /></div>
+                <div className="pricing__plan-contents-item"><span>SEO</span><Checkmark /></div>
                 <div className="pricing__plan-contents-item"><span>Custom design</span><Checkmark /></div>
                 <div className="pricing__plan-contents-item"><span>Custom application</span><Checkmark /></div>
               </div>
