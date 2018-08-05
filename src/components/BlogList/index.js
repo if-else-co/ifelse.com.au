@@ -25,9 +25,9 @@ const BlogList = props => {
         published = blog.fields.published;
         timeToRead = Math.floor(blog.fields.body.split(' ').length / 150);
 
-        if (blog.fields.featured_image) {
-          imgSrc = blog.fields.featured_image.fields.file.url;
-          imgAlt = blog.fields.featured_image.fields.title;
+        if (blog.fields.teaser) {
+          imgSrc = blog.fields.teaser.fields.file.url;
+          imgAlt = blog.fields.teaser.fields.title;
         }
       }
 
