@@ -10,10 +10,10 @@ export default {
   ],
   learn_more: {
     link: '#learn-more',
-    label: 'learn more',
+    label: 'Learn more',
   },
   inquire: {
     link: '#get-in-touch',
-    label: 'inquire',
+    label: 'Inquire',
   },
 };
