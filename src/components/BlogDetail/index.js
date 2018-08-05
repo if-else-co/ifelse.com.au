@@ -19,6 +19,7 @@ const BlogDetail = props => {
   let imgSrc;
   let publishedDate;
   let timeToRead;
+  console.log(props);
 
   if (props.blog) {
     title = props.blog.title;

@@ -19,7 +19,7 @@ class Typewriter extends React.Component {
         this.setState({
           resetting: true,
         }, () => {
-          setTimeout(() => {
+          this.timeout = setTimeout(() => {
             this.setState({
               letterCount: 0,
               blurbIndex: this.state.blurbIndex + 1,
@@ -33,6 +33,7 @@ class Typewriter extends React.Component {
 
   componentWillUnmount() {
     clearInterval(this.interval);
+    clearTimeout(this.timeout);
   }
 
   render() {
