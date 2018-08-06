@@ -14,7 +14,7 @@ const ProjectTeaser = props => {
   </li>;
   let element;
   if (props.loading === false) {
-    element = <li className="project-teaser">
+    element = <li className={`project-teaser project-teaser--${props.pricePackage.toLowerCase()}`}>
       <a className="project-teaser__link" href={props.url}>
         <div className="project-teaser__image-wrapper">
           <img className="project-teaser__desktop-wrapper" src={desktop} alt=""/>
@@ -24,7 +24,9 @@ const ProjectTeaser = props => {
         </div>
         <div className="project-teaser__content">
           <h3 className="project-teaser__name">{props.title}</h3>
-          <div className="project-teaser__type">{props.type}</div>
+          <div className="project-teaser__type">
+            <span className="project-teaser__price-package">{props.pricePackage}</span> &middot; {props.type}
+          </div>
         </div>
       </a>
     </li>;

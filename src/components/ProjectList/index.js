@@ -16,17 +16,16 @@ const ProjectList = props => {
     let id = i;
     let title;
     let link;
+    let pricePackage;
 
     if (props.loading === false) {
-      if (project.fields.featured_image) {
-        imgSrc = project.fields.featured_image.fields.file.url;
-        mobileSrc = project.fields.mobile_image.fields.file.url;
-        category = project.fields.tags[0].fields.title;
-      }
-
       id = project.sys.id;
       title = project.fields.title;
       link = project.fields.link;
+      imgSrc = project.fields.featured_image.fields.file.url;
+      mobileSrc = project.fields.mobile_image.fields.file.url;
+      category = project.fields.tags[0].fields.title;
+      pricePackage = project.fields.price_package;
     }
 
     return (
@@ -38,6 +37,7 @@ const ProjectList = props => {
         title={title}
         url={link}
         type={category}
+        pricePackage={pricePackage}
         loading={props.loading}
       />
     );
