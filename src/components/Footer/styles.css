@@ -14,10 +14,24 @@
   }
 }
 
+.footer__contact-methods {
+  margin: .5rem 0 0;
+}
+
 .footer__contact-method {
+  display: block;
+  margin: .5rem 1rem 0 0;
   color: inherit;
   text-decoration: inherit;
-  margin-right: 1rem;
+}
+.footer__contact-method:first-child {
+  margin-top: 0;
+}
+@media (min-width: 420px) {
+  .footer__contact-method {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+  }
 }
 
 .footer__contact-method-icon {

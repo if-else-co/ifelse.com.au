@@ -20,12 +20,30 @@ if (process.env.NODE_ENV === 'development') {
 const history = createBrowserHistory();
 middleware.push(routerMiddleware(history));
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const preloadedState = window.__PRELOADED_STATE__ || '{}';
 const store = createStore(
   connectRouter(history)(reducers),
+  JSON.parse(preloadedState),
   composeEnhancers(applyMiddleware.apply(null, middleware)),
 );
 
 class App extends Component {
+  componentDidMount() {
+    let snapshot;
+    const interval = setInterval(() => {
+      snapshot = store.getState();
+      if (
+        snapshot.blogs.blogs.length > 0 &&
+        snapshot.projects.projects.length > 0
+      ) {
+        const preloadedState = document.createElement('script');
+        preloadedState.innerHTML = `window.__PRELOADED_STATE__ = ${JSON.stringify(snapshot)};`;
+        document.getElementById('root').appendChild(preloadedState);
+        clearInterval(interval);
+      }
+    }, 1000);
+  }
+
   render() {
     return (
       <Provider store={store}>

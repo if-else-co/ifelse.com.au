@@ -54,10 +54,11 @@
 .splash__subtitle {
   font-weight: 700;
   font-size: 1rem;
-  margin: 1rem auto .5rem;
+  margin: 1rem auto 2rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   .splash__subtitle {
+    margin: 1rem auto .5rem;
     font-size: 1.5rem;
   }
 }
@@ -68,12 +69,14 @@
 }
 
 .splash__blurb {
+  display: none;
   font-weight: 700;
   font-size: .75rem;
   margin: .5rem auto 2rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   .splash__blurb {
+    display: block;
     font-size: 1rem;
   }
 }

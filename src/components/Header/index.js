@@ -17,17 +17,23 @@ class Header extends Component {
     let navItems = [
       {
         icon: '',
-        onClick: () => {smoothScrollTo('blogs', 16, 500)},
+        onClick: () => {
+          smoothScrollTo('blogs', 16, 500)
+        },
         label: 'blogs',
       },
       {
         icon: '',
-        onClick: () => {smoothScrollTo('solutions', 16, 500)},
+        onClick: () => {
+          smoothScrollTo('solutions', 16, 500)
+        },
         label: 'solutions',
       },
       {
         icon: '',
-        onClick: () => {smoothScrollTo('case-studies', 16, 500)},
+        onClick: () => {
+          smoothScrollTo('case-studies', 16, 500)
+        },
         label: 'case studies',
       },
       {

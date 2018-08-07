@@ -37,5 +37,6 @@ export const smoothScrollTo = (id, d = 16, time = 300) => {
         clearInterval(int);
       }
     }, d);
+    el.focus();
   }
 }
