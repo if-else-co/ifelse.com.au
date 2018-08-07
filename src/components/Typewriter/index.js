@@ -40,10 +40,7 @@ class Typewriter extends React.Component {
 
   render() {
     let text = this.props.texts[this.state.blurbIndex % this.props.texts.length].slice(0, this.state.letterCount);
-    if (this.state.resetting) {
-      text += '&nbsp';
-    }
-    return <span dangerouslySetInnerHTML={{ __html: text }} />;
+    return <span dangerouslySetInnerHTML={{ __html: text }}></span>;
   }
 }
 

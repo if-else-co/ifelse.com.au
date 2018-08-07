@@ -82,21 +82,26 @@
     font-size: 1.25rem;
   }
 }
-.splash__blurb > span {
-  animation: blink 1s infinite;
-  border-right: 2px solid #fff;
-}
 
 @keyframes blink {
   0% {
-    border-right: 2px solid transparent;
+    border-bottom: 3px solid transparent;
   }
   50% {
-    border-right: 2px solid transparent;
+    border-bottom: 3px solid transparent;
   }
   51% {
-    border-right: 2px solid #fff;
+    border-bottom: 3px solid #fff;
   }
+}
+
+.splash__blurb-cursor {
+  display: inline-block;
+  animation: blink 1s infinite;
+  width: 10px;
+  height: 100%;
+  border-bottom: 3px solid #fff;
+  vertical-align: sub;
 }
 
 .splash__button {
