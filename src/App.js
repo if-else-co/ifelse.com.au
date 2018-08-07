@@ -33,8 +33,10 @@ class App extends Component {
     const interval = setInterval(() => {
       snapshot = store.getState();
       if (
-        snapshot.blogs.blogs.length > 0 &&
-        snapshot.projects.projects.length > 0
+        !(
+          snapshot.blogs.blogs.length === 0 && snapshot.blogs.fetching ||
+          snapshot.projects.projects.length === 0 && snapshot.projects.fetching
+        )
       ) {
         const preloadedState = document.createElement('script');
         preloadedState.innerHTML = `window.__PRELOADED_STATE__ = ${JSON.stringify(snapshot)};`;
