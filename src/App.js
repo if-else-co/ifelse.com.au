@@ -40,7 +40,7 @@ class App extends Component {
       ) {
         const preloadedState = document.createElement('script');
         preloadedState.innerHTML = `window.__PRELOADED_STATE__ = ${JSON.stringify(snapshot)};`;
-        document.getElementById('root').appendChild(preloadedState);
+        document.body.insertBefore(preloadedState, document.body.firstChild);
         clearInterval(interval);
       }
     }, 1000);
