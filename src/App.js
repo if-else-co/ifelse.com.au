@@ -20,10 +20,10 @@ if (process.env.NODE_ENV === 'development') {
 const history = createBrowserHistory();
 middleware.push(routerMiddleware(history));
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const preloadedState = window.__PRELOADED_STATE__ || '{}';
+const preloadedState = window.__PRELOADED_STATE__ || {};
 const store = createStore(
   connectRouter(history)(reducers),
-  JSON.parse(preloadedState),
+  preloadedState,
   composeEnhancers(applyMiddleware.apply(null, middleware)),
 );
 
