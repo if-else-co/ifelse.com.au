@@ -98,7 +98,7 @@
 .splash__blurb-cursor {
   display: inline-block;
   animation: blink 1s infinite;
-  width: 10px;
+  width: 12px;
   height: 100%;
   border-bottom: 3px solid #fff;
   vertical-align: sub;
