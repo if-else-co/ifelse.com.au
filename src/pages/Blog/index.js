@@ -9,8 +9,6 @@ import { getBlogBySlug } from '../../state/Blogs/selector';
 
 class Blog extends Component {
   componentWillMount() {
-    window.scrollTo(0, 0);
-
     if (!this.props.blog) {
       this.props.fetchBlogs();
     }

@@ -18,6 +18,9 @@ if (process.env.NODE_ENV === 'development') {
   middleware.push(logger);
 }
 const history = createBrowserHistory();
+history.listen(() => {
+  window.scrollTo(0, 0);
+});
 middleware.push(routerMiddleware(history));
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const preloadedState = window.__PRELOADED_STATE__ || {};
@@ -34,8 +37,8 @@ class App extends Component {
       snapshot = store.getState();
       if (
         !(
-          snapshot.blogs.blogs.length === 0 && snapshot.blogs.fetching ||
-          snapshot.projects.projects.length === 0 && snapshot.projects.fetching
+          (snapshot.blogs.blogs.length === 0 && snapshot.blogs.fetching) ||
+          (snapshot.projects.projects.length === 0 && snapshot.projects.fetching)
         )
       ) {
         const preloadedState = document.createElement('script');

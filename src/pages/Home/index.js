@@ -24,8 +24,6 @@ import './styles.css';
 
 class Home extends Component {
   componentWillMount() {
-    window.scrollTo(0, 0);
-    
     if (this.props.blogs.length < 1) {
       this.props.fetchBlogs();
     }
