@@ -7,7 +7,7 @@ class Typewriter extends React.Component {
     resetting: false,
   }
 
-  componentWillMount() {
+  componentDidMount() {
     let timeBetweenCharacters = this.props.timeBetweenCharacters || 50;
     let timeToRead = this.props.timeToRead || 2000;
     this.interval = setInterval(() => {
