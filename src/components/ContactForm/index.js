@@ -30,7 +30,8 @@ class ContactForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    fetch('/', {
+    const formSubmitURL = 'https://wt-07ecda8053e9157184aef4084d1d2126-0.sandbox.auth0-extend.com/auspicus.io';
+    fetch(formSubmitURL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state })
