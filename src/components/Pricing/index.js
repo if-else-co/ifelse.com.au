@@ -51,9 +51,9 @@ const Pricing = props => {
         <div className="pricing__grid-item">
           <div className="pricing__plan pricing--dblue">
             <div className="pricing__overview">
-              <a className="pricing__help-link" href="#">
+              <div title="Basic plan is best for small businesses and independent contractors" className="pricing__help-link">
                 <Question />
-              </a>
+              </div>
               <h3 className="pricing__plan-title">Basic</h3>
               <div className="pricing__plan-upfront">
                 <sup>$</sup>500
@@ -97,9 +97,9 @@ const Pricing = props => {
         <div className="pricing__grid-item">
           <div className="pricing__plan pricing--purple">
             <div className="pricing__overview">
-              <a className="pricing__help-link" href="#">
+              <div title="Premium plan is best for small and medium sized businesses" className="pricing__help-link">
                 <Question />
-              </a>
+              </div>
               <h3 className="pricing__plan-title">Premium</h3>
               <div className="pricing__plan-upfront">
                 <sup>$</sup>2500
@@ -143,9 +143,9 @@ const Pricing = props => {
         <div className="pricing__grid-item">
           <div className="pricing__plan pricing--blue">
             <div className="pricing__overview">
-              <a className="pricing__help-link" href="#">
+              <div title="Enterprise plan is best for large businesses" className="pricing__help-link">
                 <Question />
-              </a>
+              </div>
               <h3 className="pricing__plan-title">Enterprise</h3>
               <button
                 onClick={() => onSelect(ENTERPRISE)}
