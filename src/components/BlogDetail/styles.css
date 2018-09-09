@@ -49,7 +49,7 @@
 }
 @media (min-width: 560px) {
   .blog-detail__title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     max-width: 560px;
   }
 }
