@@ -24,7 +24,7 @@ const Pricing = props => {
     <div className="pricing">
       <div className="pricing__grid">
         <div className="pricing__grid-item">
-          <h2 className="pricing__title">Pricing</h2>
+          <h2 className="pricing__title">Strategy</h2>
           <div className="pricing__plan-sections">
             <div className="pricing__plan-section">
               <span className="pricing__plan-section-name">Website</span>
@@ -55,15 +55,6 @@ const Pricing = props => {
                 <Question />
               </div>
               <h3 className="pricing__plan-title">Basic</h3>
-              <div className="pricing__plan-upfront">
-                <sup>$</sup>500
-              </div>
-              <div className="pricing__plan-plus">+</div>
-              <div className="pricing__plan-monthly">
-                <sup>$</sup>
-                25
-                <div>/ month</div>
-              </div>
               <button
                 onClick={() => onSelect(STARTER)}
                 className="pricing__button">
@@ -101,15 +92,6 @@ const Pricing = props => {
                 <Question />
               </div>
               <h3 className="pricing__plan-title">Premium</h3>
-              <div className="pricing__plan-upfront">
-                <sup>$</sup>2500
-              </div>
-              <div className="pricing__plan-plus">+</div>
-              <div className="pricing__plan-monthly">
-                <sup>$</sup>
-                50
-                <div>/ month</div>
-              </div>
               <button
                 onClick={() => onSelect(PREMIUM)}
                 className="pricing__button">

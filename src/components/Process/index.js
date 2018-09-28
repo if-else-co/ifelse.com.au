@@ -12,7 +12,7 @@ const Process = () => {
             <div className="process__step-number">
               <span>1</span>
             </div>
-            Gathering requirements
+            Bring us your idea
           </h3>
           <p className="process__step-details">
             We meet with you either face to face or over the phone to create a vision of how you would like to see your business online.
@@ -24,7 +24,7 @@ const Process = () => {
             <div className="process__step-number">
               <span>2</span>
             </div>
-            Prototyping design
+            Show us what it looks like
           </h3>
           <p className="process__step-details">
             Through an interative process we build a design based around your requirements which depends heavily on what type of online presence you want to have. The sky is the limit here and we like to provide inspiration as to how you can further build relationships with your audience via all avenues of interaction.
@@ -35,7 +35,7 @@ const Process = () => {
             <div className="process__step-number">
               <span>3</span>
             </div>
-            Developing the website
+            Show us how it works
           </h3>
           <p className="process__step-details">
             Building your website is the key to obtaining and maintaining relevancy online. We ensure your website is a shining example for search engine optimization, clean and user friendly responsive design, usability, performance and full accessibility. This helps you rank higher and reach your audience faster than your competitors.
@@ -46,7 +46,7 @@ const Process = () => {
             <div className="process__step-number">
               <span>4</span>
             </div>
-            Going live &amp; building an audience
+            Find your audience
           </h3>
           <p className="process__step-details">
             Once you're up and running online we help you to start directing traffic to your new website. Using analytics we target your specific market, opening the flood gates for all the potential customers. We can also help in running marketing campaigns and creating advertisements for your social media accounts to drive even more traffic to your site.

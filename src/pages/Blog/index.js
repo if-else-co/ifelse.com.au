@@ -16,15 +16,28 @@ class Blog extends Component {
 
   render() {
     let title;
+    let summary;
+    let keywords;
 
     if (this.props.blog) {
       title = this.props.blog.title;
+      summary = this.props.blog.summary;
+      keywords = this.props.blog.tags
+        .map(tag => tag.fields.title.toLowerCase().split(' ').join(', '))
+        .join(', ');
     }
 
     return (
       <div>
-        <Helmet title={title} />
-        <BlogDetail blog={this.props.blog} loading={this.props.loading} />
+        <Helmet
+          title={title}
+          meta={[
+            { name: 'description', content: summary },
+            { name: 'keywords', content: keywords },
+          ]} />
+        <BlogDetail
+          blog={this.props.blog}
+          loading={this.props.loading} />
       </div>
     );
   }
