@@ -1,4 +1,5 @@
 export default {
+  url: 'https://auspicus.io',
   title: 'auspicus.io',
   subtitle: 'Professional online presence management',
   blurb: [
