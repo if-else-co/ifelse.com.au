@@ -24,7 +24,7 @@ const Pricing = props => {
     <div className="pricing">
       <div className="pricing__grid">
         <div className="pricing__grid-item">
-          <h2 className="pricing__title">Strategy</h2>
+          <h2 className="pricing__title">Plans</h2>
           <div className="pricing__plan-sections">
             <div className="pricing__plan-section">
               <span className="pricing__plan-section-name">Website</span>
