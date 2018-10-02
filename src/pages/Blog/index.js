@@ -39,13 +39,13 @@ class Blog extends Component {
           meta={[
             { name: 'description', content: summary },
             { name: 'keywords', content: keywords },
-            { name: 'og:url', content: `${config.url}/post/${slug}` },
-            { name: 'og:type', content: 'article' },
-            { name: 'og:title', content: title },
-            { name: 'og:description', content: summary },
-            { name: 'og:image', content: image },
-            { name: 'twitter:site', content: '@Auspicus' },
-            { name: 'twitter:creator', content: '@Auspicus' },
+            { property: 'og:url', content: `${config.url}/post/${slug}` },
+            { property: 'og:type', content: 'article' },
+            { property: 'og:title', content: title },
+            { property: 'og:description', content: summary },
+            { property: 'og:image', content: image },
+            { property: 'twitter:site', content: '@Auspicus' },
+            { property: 'twitter:creator', content: '@Auspicus' },
           ]} />
         <BlogDetail
           blog={this.props.blog}
