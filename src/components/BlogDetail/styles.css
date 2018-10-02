@@ -35,15 +35,13 @@
 .blog-detail__title {
   max-width: 100%;
   margin: 2rem auto;
-  font-size: 1.25rem;
-  line-height: 2rem;
+  line-height: 1.25;
   padding: 0 1rem;
   color: #212121;
 }
 @media (min-width: 420px) {
   .blog-detail__title {
-    line-height: 3rem;
-    font-size: 1.5rem;
+    line-height: 1.25;
     padding: 0 2rem;
   }
 }

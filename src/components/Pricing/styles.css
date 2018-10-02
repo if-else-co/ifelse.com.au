@@ -4,6 +4,10 @@
   border-bottom: 1px solid #ccc;
   max-width: 960px;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  /* older spec implementation */
+  scroll-snap-destination: 0% 100%;
+  scroll-snap-points-x: repeat(100%);
 }
 
 .pricing__grid {
@@ -37,6 +41,12 @@
 
 .pricing__grid-item:last-child {
   margin-right: 0;
+}
+
+.pricing__grid-item:nth-child(2),
+.pricing__grid-item:nth-child(3),
+.pricing__grid-item:nth-child(4) {
+  scroll-snap-align: center;
 }
 
 @media (min-width: 1000px) {
