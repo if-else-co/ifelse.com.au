@@ -19,7 +19,7 @@ class Splash extends Component {
           <h1 className="splash__title">{config.title}</h1>
           <h2 className="splash__subtitle">{config.subtitle}</h2>
           <h3 className="splash__blurb">
-            <Typewriter texts={config.blurb} /><span class="splash__blurb-cursor"></span>
+            <Typewriter texts={config.blurb} /><span className="splash__blurb-cursor"></span>
           </h3>
           <a className="splash__button" onClick={() => smoothScrollTo('learn-more', 16, 500)}>{config.learn_more.label}</a>
           <a className="splash__button" onClick={this.props.toggleMenu}>{config.inquire.label}</a>

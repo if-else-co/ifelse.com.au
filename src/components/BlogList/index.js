@@ -31,7 +31,7 @@ const BlogList = props => {
         }
       }
 
-      return (
+      return !props.loading ? (
         <BlogTeaser
           key={slug}
           to={slug}
@@ -42,7 +42,7 @@ const BlogList = props => {
           timeToRead={timeToRead}
           loading={props.loading}
         />
-      );
+      ) : null;
     });
 
   return (

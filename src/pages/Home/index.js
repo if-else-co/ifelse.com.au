@@ -11,7 +11,6 @@ import CallToAction from '../../components/CallToAction';
 
 import { fetchBlogs } from '../../state/Blogs/actions';
 import { fetchProjects } from '../../state/Projects/actions';
-import { toggleMenu } from '../../state/Menu/actions';
 
 import drupal8 from './drupal-8.png';
 import netlify from './netlify.png';
@@ -44,18 +43,23 @@ class Home extends Component {
           ]} />
         <Splash />
         <div className="intro">
-          <h2 className="intro__title" id="learn-more">What we do</h2>
-          <p className="intro__body">
-            Whether you're a brand new company or an established business, 
-            there's no denying that moving online is a big step. 
-            We make that transition easy for you by providing services 
-            to manage your social media accounts, websites, analytics and 
-            applications.<br/><br/>We work with you to manage and update your 
-            Facebook, Instagram, Twitter, Google Analytics, Adsense &amp; 
-            Search Console as well as maintaining and hosting your own custom 
-            website. Get online today, <a onClick={this.props.toggleMenu}>send us a message</a> and
-            let's get started!
-          </p>
+          <div className="intro__two-column">
+            <div className="intro__left">
+              <p className="intro__body-lg">
+                We help businesses big and small maximize their marketing, design &amp; technical reach.
+              </p>
+            </div>
+            <hr className="intro__two-column-divider" />
+            <div className="intro__right">
+              <p className="intro__body">
+                Whether you're a brand new company or an established business, 
+                there's no denying that moving online is a big step. 
+                We make that transition easy for you by streamlining the process of
+                managing your Facebook, Instagram, Twitter, Google Analytics,
+                Adsense &amp; Search Console as well as maintaining and hosting your own custom website.
+              </p>
+            </div>
+          </div>
         </div>
         <ProjectList
           projects={this.props.projects || []}
@@ -125,7 +129,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   fetchBlogs: () => dispatch(fetchBlogs()),
   fetchProjects: () => dispatch(fetchProjects()),
-  toggleMenu: () => dispatch(toggleMenu()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

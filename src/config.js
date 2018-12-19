@@ -15,6 +15,6 @@ export default {
   },
   inquire: {
     link: '#get-in-touch',
-    label: 'Inquire',
+    label: 'Get started',
   },
 };
