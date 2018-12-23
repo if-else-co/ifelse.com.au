@@ -11,6 +11,7 @@ import CallToAction from '../../components/CallToAction';
 
 import { fetchBlogs } from '../../state/Blogs/actions';
 import { fetchProjects } from '../../state/Projects/actions';
+import { toggleMenu } from '../../state/Menu/actions';
 
 import drupal8 from './drupal-8.png';
 import netlify from './netlify.png';
@@ -64,6 +65,15 @@ class Home extends Component {
         <ProjectList
           projects={this.props.projects || []}
           loading={this.props.loadingProjects} />
+        <Pricing onSelect={this.props.toggleMenu} />
+        <Process />
+        <div id="blogs">
+          <BlogList
+            blogs={this.props.blogs || []}
+            limit={3}
+            loading={this.props.loadingBlogs}
+            />
+        </div>
         <div className="solutions" id="solutions">
           <ul className="solutions__list">
             <li className="solutions__list-item">
@@ -98,15 +108,6 @@ class Home extends Component {
             </li>
           </ul>
         </div>
-        <Pricing onSelect={this.props.toggleMenu} />
-        <Process />
-        <div id="blogs">
-          <BlogList
-            blogs={this.props.blogs || []}
-            limit={3}
-            loading={this.props.loadingBlogs}
-            />
-        </div>
         <CallToAction
           foreground="#fff"
           background="#3e8889"
@@ -129,6 +130,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   fetchBlogs: () => dispatch(fetchBlogs()),
   fetchProjects: () => dispatch(fetchProjects()),
+  toggleMenu: () => dispatch(toggleMenu())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

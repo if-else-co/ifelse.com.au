@@ -45,7 +45,7 @@ const ProjectList = props => {
 
   return (
     <div className="project-list">
-      <h2 className="project-list__title" id="case-studies">Case Studies</h2>
+      <h2 className="project-list__title" id="case-studies">Solutions to real world problems</h2>
       <ul className="project-list__list">{projects}</ul>
     </div>
   )
