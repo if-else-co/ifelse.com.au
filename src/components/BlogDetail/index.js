@@ -1,17 +1,27 @@
-import React, { createElement } from 'react';
-import marksy from 'marksy';
+import React from 'react';
+import showdown from 'showdown';
+import Prism from 'prismjs/components/prism-core';
+import 'prismjs/components/prism-clike';
+import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-markup-templating';
+import 'prismjs/components/prism-php';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-yaml';
+import 'prismjs/themes/prism-okaidia.css';
 
 import { formatDate } from '../../helpers';
 import './styles.css';
 
-const getMarkup = field => {
-  if (!field) return null;
-  const compile = marksy({
-    createElement,
-    elements: {}
-  });
-  return compile(field).tree;
-};
+const renderMarkup = (string) => {
+  const fragment = document.createDocumentFragment();
+  const wrapper = document.createElement('div');
+  const converter = new showdown.Converter();
+  wrapper.innerHTML = converter.makeHtml(string);
+  wrapper.id = 'prism-wrapper';
+  fragment.appendChild(wrapper);
+  Prism.highlightAllUnder(fragment);
+  return fragment.querySelector('#prism-wrapper').innerHTML;
+}
 
 const BlogDetail = props => {
   let loadingBlogDetail = (
@@ -47,7 +57,7 @@ const BlogDetail = props => {
     title = props.blog.title;
     imgSrc = props.blog.featured_image.fields.file.url;
     imgAlt = props.blog.featured_image.fields.title;
-    content = getMarkup(props.blog.body);
+    content = renderMarkup(props.blog.body);
     publishedDate = formatDate(new Date(props.blog.published));
     timeToRead = Math.floor(props.blog.body.split(' ').length / 150);
   }
@@ -65,9 +75,7 @@ const BlogDetail = props => {
       <div className="blog-detail__meta">
         {publishedDate} &middot; {timeToRead} min read
       </div>
-      <div className="blog-detail__content">
-        {content}
-      </div>
+      <div className="blog-detail__content" dangerouslySetInnerHTML={{ __html: content }}></div>
     </div>
   )
 };

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer role="contentinfo" className="footer">
       <div className="footer__copyright">
-        <div>&copy; David Disch 2017</div>
+        <div>&copy; David Disch {(new Date()).getFullYear()}</div>
         <div className="footer__contact-methods">
           <a className="footer__contact-method" href="tel:+17608964478">
             <img className="footer__contact-method-icon" src={call} alt="Telephone ready to call" /> +1 (760) 896-4478 

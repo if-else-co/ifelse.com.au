@@ -160,21 +160,65 @@
   font-size: .9rem;
 }
 
-.blog-detail__content code.language-javascript {
+.blog-detail__content code.language-javascript,
+.blog-detail__content code.language-php,
+.blog-detail__content code.language-yaml,
+.blog-detail__content code.language-info {
   position: relative;
 }
 
-.blog-detail__content code.language-javascript::before {
-  content: 'javascript';
+.blog-detail__content code.language-javascript::before,
+.blog-detail__content code.language-php::before,
+.blog-detail__content code.language-yaml::before,
+.blog-detail__content code.language-info::before {
   position: absolute;
   display: block;
   top: 0;
   left: 0;
-  transform: translate(-1rem, -3.5rem);
-  background: #759963;
-  color: #fff;
+  transform: translate(-.5rem, -2.75rem);
   padding: .5rem;
   font-size: .8rem;
+}
+
+.blog-detail__content code.language-javascript::before {
+  content: 'javascript';
+  background: #759963;
+  color: #fff;
+}
+
+.blog-detail__content code.language-php::before {
+  content: 'php';
+  background: #8892BF;
+  color: #232630;
+  font-style: italic;
+}
+
+.blog-detail__content code.language-info::before {
+  content: 'info';
+  background: #8892BF;
+  color: #232630;
+}
+
+.blog-detail__content code.language-yaml::before {
+  content: 'yaml';
+  background: #eaeaa6;
+  color: #3c3c3c;
+}
+
+.blog-detail__content blockquote {
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 560px;
+  font-style: italic;
+  padding-left: 1rem;
+  border-left: .5rem solid #ccc;
+  color: #313131;
+}
+@media (min-width: 960px) {
+  .blog-detail__content blockquote {
+    max-width: 760px;
+    padding-left: 2rem;
+  }
 }
 
 .blog-detail__content a {

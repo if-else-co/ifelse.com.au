@@ -8,8 +8,14 @@ const BlogList = props => {
   const limit = props.limit || 3;
   let loadingBlogs = props.loading === false
     ? props.blogs
-    : [{}, {}, {}];
+    : Array(limit).fill({});
   let blogs = loadingBlogs
+    .sort((a, b) => {
+      let fa = a.fields
+      let fb = b.fields
+
+      return !!fa && !!fb ? (Date.parse(fa.published) > Date.parse(fb.published) ? -1 : 1) : 0
+    })
     .filter((_, i) => i < limit)
     .map((blog, i) => {
       let imgSrc;
