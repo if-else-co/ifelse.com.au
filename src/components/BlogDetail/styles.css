@@ -149,60 +149,62 @@
 
 .blog-detail__content pre {
   padding: 3rem 1rem 1rem;
+  position: relative;
   box-sizing: border-box;
   background: #363436;
   color: #fff;
   line-height: 1.25;
-  overflow-x: scroll;
 }
 
 .blog-detail__content code {
   font-size: .9rem;
+  overflow-x: scroll;
 }
 
-.blog-detail__content code.language-javascript,
-.blog-detail__content code.language-php,
-.blog-detail__content code.language-yaml,
-.blog-detail__content code.language-info {
-  position: relative;
-}
-
-.blog-detail__content code.language-javascript::before,
-.blog-detail__content code.language-php::before,
-.blog-detail__content code.language-yaml::before,
-.blog-detail__content code.language-info::before {
+.blog-detail__content pre.language-javascript::before,
+.blog-detail__content pre.language-php::before,
+.blog-detail__content pre.language-yaml::before,
+.blog-detail__content pre.language-info::before,
+.blog-detail__content pre.language-json::before {
   position: absolute;
   display: block;
   top: 0;
   left: 0;
-  transform: translate(-.5rem, -2.75rem);
+  right: 0;
+  width: 100%;
   padding: .5rem;
   font-size: .8rem;
 }
 
-.blog-detail__content code.language-javascript::before {
+.blog-detail__content pre.language-javascript::before {
   content: 'javascript';
   background: #759963;
   color: #fff;
 }
 
-.blog-detail__content code.language-php::before {
+.blog-detail__content pre.language-php::before {
   content: 'php';
   background: #8892BF;
   color: #232630;
   font-style: italic;
 }
 
-.blog-detail__content code.language-info::before {
+.blog-detail__content pre.language-info::before {
   content: 'info';
   background: #8892BF;
   color: #232630;
 }
 
-.blog-detail__content code.language-yaml::before {
+.blog-detail__content pre.language-yaml::before {
   content: 'yaml';
   background: #eaeaa6;
   color: #3c3c3c;
+}
+
+.blog-detail__content pre.language-json::before {
+  content: 'json';
+  background: #f92672;
+  color: #fff;
 }
 
 .blog-detail__content blockquote {

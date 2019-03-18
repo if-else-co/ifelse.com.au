@@ -7,6 +7,7 @@ import 'prismjs/components/prism-markup-templating';
 import 'prismjs/components/prism-php';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-yaml';
+import 'prismjs/components/prism-json';
 import 'prismjs/themes/prism-okaidia.css';
 
 import { formatDate } from '../../helpers';
