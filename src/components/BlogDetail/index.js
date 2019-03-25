@@ -12,6 +12,7 @@ import 'prismjs/themes/prism-okaidia.css';
 
 import { formatDate } from '../../helpers';
 import './styles.css';
+import GoogleAd from '../GoogleAd';
 
 const renderMarkup = (string) => {
   const fragment = document.createDocumentFragment();
@@ -75,6 +76,13 @@ const BlogDetail = props => {
       <h1 className="blog-detail__title">{title}</h1>
       <div className="blog-detail__meta">
         {publishedDate} &middot; {timeToRead} min read
+      </div>
+      <div className="blog-detail__ad">
+        <GoogleAd
+          adClient="ca-pub-6381981655006048"
+          adSlot="9667865367"
+          adFormat="auto"
+          fullWidthResponse="true" />
       </div>
       <div className="blog-detail__content" dangerouslySetInnerHTML={{ __html: content }}></div>
     </div>
