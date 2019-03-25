@@ -32,21 +32,23 @@ const store = createStore(
 
 class App extends Component {
   componentDidMount() {
-    let snapshot;
-    const interval = setInterval(() => {
-      snapshot = store.getState();
-      if (
-        !(
-          (snapshot.blogs.blogs.length === 0 && snapshot.blogs.fetching) ||
-          (snapshot.projects.projects.length === 0 && snapshot.projects.fetching)
-        )
-      ) {
-        const preloadedState = document.createElement('script');
-        preloadedState.innerHTML = `window.__PRELOADED_STATE__ = ${JSON.stringify(snapshot)};`;
-        document.body.insertBefore(preloadedState, document.body.firstChild);
-        clearInterval(interval);
-      }
-    }, 1000);
+    if (navigator.userAgent === 'ReactSnap') {
+      let snapshot;
+      const interval = setInterval(() => {
+        snapshot = store.getState();
+        if (
+          !(
+            (snapshot.blogs.blogs.length === 0 && snapshot.blogs.fetching) ||
+            (snapshot.projects.projects.length === 0 && snapshot.projects.fetching)
+          )
+        ) {
+          const preloadedState = document.createElement('script');
+          preloadedState.innerHTML = `window.__PRELOADED_STATE__ = ${JSON.stringify(snapshot)};`;
+          document.body.insertBefore(preloadedState, document.body.firstChild);
+          clearInterval(interval);
+        }
+      }, 1000);
+    }
   }
 
   render() {
