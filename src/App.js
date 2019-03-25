@@ -48,6 +48,11 @@ class App extends Component {
           clearInterval(interval);
         }
       }, 1000);
+    } else {
+      const googlePageAdScript = document.createElement('script')
+      googlePageAdScript.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+      googlePageAdScript.async = true
+      document.body.insertBefore(googlePageAdScript, document.body.firstChild)
     }
   }
 
