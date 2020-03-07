@@ -8,13 +8,13 @@ const Footer = () => {
   return (
     <footer role="contentinfo" className="footer">
       <div className="footer__copyright">
-        <div>&copy; David Disch {(new Date()).getFullYear()}</div>
+        <div>&copy; IfElse {(new Date()).getFullYear()}</div>
         <div className="footer__contact-methods">
-          <a className="footer__contact-method" href="tel:+17608964478">
-            <img className="footer__contact-method-icon" src={call} alt="Telephone ready to call" /> +1 (760) 896-4478 
+          <a className="footer__contact-method" href="tel:+61421401521">
+            <img className="footer__contact-method-icon" src={call} alt="Telephone ready to call" /> +61 421 401 521 
           </a>
-          <a className="footer__contact-method" href="mailto:davidedisch@gmail.com">
-            <img className="footer__contact-method-icon" src={mail} alt="Letter" /> davidedisch@gmail.com 
+          <a className="footer__contact-method" href="mailto:sales@ifelse.com.au">
+            <img className="footer__contact-method-icon" src={mail} alt="Letter" /> sales@ifelse.com.au 
           </a>
         </div>
       </div>

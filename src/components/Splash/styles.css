@@ -39,6 +39,7 @@
   margin-top: 0;
   margin: 0 auto 1.5rem;
   font-size: 2rem;
+  text-transform: lowercase;
 }
 @media (min-width: 640px) {
   .splash__title {
@@ -49,6 +50,20 @@
   .splash__title {
     font-size: 4rem;
   }
+}
+
+.splash__title span:nth-child(1) {
+  color: hsla(181, 75%, 70%, 1);
+}
+
+.splash__title span:nth-child(2) {
+  color: #fff;
+  margin-left: 1rem;
+  margin-right: .75rem;
+}
+
+.splash__title span:nth-child(3) {
+  color: hsla(18, 75%, 60%, 1);
 }
 
 .splash__subtitle {

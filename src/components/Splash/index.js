@@ -16,7 +16,11 @@ class Splash extends Component {
       <div className="splash">
         <div style={{backgroundImage: `url(${background})`}} className="splash__background"></div>
         <div className="splash__content">
-          <h1 className="splash__title">{config.title}</h1>
+          <h1 className="splash__title">
+            <span>If</span>
+            <span>?</span>
+            <span>Else</span>
+          </h1>
           <h2 className="splash__subtitle">{config.subtitle}</h2>
           <h3 className="splash__blurb">
             <Typewriter texts={config.blurb} /><span className="splash__blurb-cursor"></span>

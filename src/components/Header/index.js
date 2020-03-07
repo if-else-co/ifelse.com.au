@@ -68,19 +68,19 @@ class Header extends Component {
       <header>
         <div className="nav__contact">
           <div className="nav__contact-container">
-            <a className="nav__contact-method" href="tel:+17608964478">
+            <a className="nav__contact-method" href="tel:+61421401521">
               <img
                 className="nav__contact-method-icon"
                 src={call}
                 alt="Telephone ready to call" />
-              +1 (760) 896-4478
+              +61 421 401 521
             </a>
-            <a className="nav__contact-method" href="mailto:davidedisch@gmail.com">
+            <a className="nav__contact-method" href="mailto:sales@ifelse.com.au">
               <img
                 className="nav__contact-method-icon"
                 src={mail}
                 alt="Letter" />
-              davidedisch@gmail.com
+              sales@ifelse.com.au
             </a>
           </div>
         </div>

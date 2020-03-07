@@ -1,6 +1,6 @@
 export default {
-  url: 'https://auspicus.io',
-  title: 'auspicus.io',
+  url: 'https://ifelse.com.au',
+  title: 'If Else',
   subtitle: 'Professional online presence management',
   blurb: [
     'Bringing your brand from an idea to a creation',
