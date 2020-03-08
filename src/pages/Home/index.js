@@ -37,9 +37,9 @@ class Home extends Component {
     return (
       <div>
         <Helmet
-          title="IfElse - Web Development, Design &amp; Social Media Marketing"
+          title="if ? else - Web Development, Design &amp; Social Media Marketing"
           meta={[
-            { name: 'description', content: 'IfElse is a web development, design and marketing agency specialising in implementing and maintaining the latest technologies in the industry.' },
+            { name: 'description', content: 'if ? else is a web development, design and marketing agency specialising in implementing and maintaining the latest technologies in the industry.' },
             { name: 'keywords', content: 'web, development, agency, design, marketing, javascript, nodejs, php, wordpress, drupal' },
           ]} />
         <Splash />
